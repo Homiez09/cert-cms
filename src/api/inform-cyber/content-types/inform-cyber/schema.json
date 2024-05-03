@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inform_cybers",
+  "info": {
+    "singularName": "inform-cyber",
+    "pluralName": "inform-cybers",
+    "displayName": "Inform Cyber",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "agency": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "string",
+      "required": true
+    },
+    "event": {
+      "type": "text",
+      "required": true
+    },
+    "cause": {
+      "type": "text",
+      "required": true
+    },
+    "impact": {
+      "type": "string",
+      "required": true
+    },
+    "dateAndTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "eventType": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "severity": {
+      "type": "string",
+      "required": true
+    },
+    "needAssistance": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
