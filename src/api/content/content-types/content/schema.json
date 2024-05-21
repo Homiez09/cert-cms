@@ -41,6 +41,12 @@
       },
       "customField": "plugin::ckeditor5.CKEditor",
       "required": true
+    },
+    "inform_cyber": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inform-cyber.inform-cyber",
+      "inversedBy": "content"
     }
   }
 }

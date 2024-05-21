@@ -59,6 +59,15 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "email": {
+      "type": "string"
+    },
+    "content": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::content.content",
+      "mappedBy": "inform_cyber"
     }
   }
 }

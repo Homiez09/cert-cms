@@ -848,6 +848,11 @@ export interface ApiContentContent extends Schema.CollectionType {
           preset: 'toolbarBalloon';
         }
       >;
+    inform_cyber: Attribute.Relation<
+      'api::content.content',
+      'oneToOne',
+      'api::inform-cyber.inform-cyber'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -889,6 +894,12 @@ export interface ApiInformCyberInformCyber extends Schema.CollectionType {
     severity: Attribute.String & Attribute.Required;
     needAssistance: Attribute.String & Attribute.Required;
     image: Attribute.Media;
+    email: Attribute.String;
+    content: Attribute.Relation<
+      'api::inform-cyber.inform-cyber',
+      'oneToOne',
+      'api::content.content'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
