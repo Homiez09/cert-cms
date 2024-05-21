@@ -68,6 +68,11 @@
       "relation": "oneToOne",
       "target": "api::content.content",
       "mappedBy": "inform_cyber"
+    },
+    "inform_cyber_approval": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inform-cyber-approval.inform-cyber-approval"
     }
   }
 }

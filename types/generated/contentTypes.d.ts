@@ -900,6 +900,11 @@ export interface ApiInformCyberInformCyber extends Schema.CollectionType {
       'oneToOne',
       'api::content.content'
     >;
+    inform_cyber_approval: Attribute.Relation<
+      'api::inform-cyber.inform-cyber',
+      'oneToOne',
+      'api::inform-cyber-approval.inform-cyber-approval'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -911,6 +916,37 @@ export interface ApiInformCyberInformCyber extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::inform-cyber.inform-cyber',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiInformCyberApprovalInformCyberApproval
+  extends Schema.CollectionType {
+  collectionName: 'inform_cyber_approvals';
+  info: {
+    singularName: 'inform-cyber-approval';
+    pluralName: 'inform-cyber-approvals';
+    displayName: 'Inform Cyber Approval';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    type: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::inform-cyber-approval.inform-cyber-approval',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::inform-cyber-approval.inform-cyber-approval',
       'oneToOne',
       'admin::user'
     > &
@@ -939,6 +975,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::content.content': ApiContentContent;
       'api::inform-cyber.inform-cyber': ApiInformCyberInformCyber;
+      'api::inform-cyber-approval.inform-cyber-approval': ApiInformCyberApprovalInformCyberApproval;
     }
   }
 }
