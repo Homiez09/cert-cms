@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inform_cyber_approvals",
+  "info": {
+    "singularName": "inform-cyber-approval",
+    "pluralName": "inform-cyber-approvals",
+    "displayName": "Inform Cyber Approval"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    }
+  }
+}
