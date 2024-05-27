@@ -73,6 +73,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::inform-cyber-approval.inform-cyber-approval"
+    },
+    "other": {
+      "type": "string"
     }
   }
 }

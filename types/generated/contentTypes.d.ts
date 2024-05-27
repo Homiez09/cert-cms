@@ -905,6 +905,7 @@ export interface ApiInformCyberInformCyber extends Schema.CollectionType {
       'oneToOne',
       'api::inform-cyber-approval.inform-cyber-approval'
     >;
+    other: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
